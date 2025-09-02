@@ -1,0 +1,19 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "tui1_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/filmil/bazel-go-basic/bin/tui1",
+    visibility = ["//visibility:private"],
+    deps = [
+        "@com_github_epiclabs_io_winman//:winman",
+        "@com_github_gdamore_tcell_v2//:tcell",
+        "@com_github_rivo_tview//:tview",
+    ],
+)
+
+go_binary(
+    name = "tui1",
+    embed = [":tui1_lib"],
+    visibility = ["//visibility:public"],
+)

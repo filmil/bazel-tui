@@ -1,11 +1,10 @@
+load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 load("@gazelle//:def.bzl", "gazelle")
 
 # bazel run //:gazelle
 # XXX: edit this prefix
 # gazelle:prefix github.com/filmil/bazel-go-basic
 gazelle(name = "gazelle")
-
-load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 
 # bazel run //:buildifier
 buildifier(
