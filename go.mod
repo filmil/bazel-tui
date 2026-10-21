@@ -1,6 +1,6 @@
 module github.com/filmil/bazel-tui
 
-go 1.24.1
+go 1.26.10
 
 require (
 	github.com/epiclabs-io/winman v0.0.0-20220901164457-3d8c4b3ae090
